@@ -1,5 +1,5 @@
 # Deep Image Retrieval
-**Content-based image retrieval example using Deep Neural Networks (Inception Res-Net V2) in Keras**
+**Content-based image retrieval example using Deep Neural Networks (Inception Res-Net V2 with imgnet weights) in Keras, feel free to test the IPython notebook attached to test the code in google colab.**
 
 This code will sort a dataset of search images into categories predicted by Inception Res-Net then create a feature vector for each image in the search database.
 The feature vector is created using the conv layers of Inception Res-Net where the output tensor is then global average pooled and normalized resulting in a feature vector of size 1536.
