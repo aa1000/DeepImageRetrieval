@@ -4,7 +4,7 @@
 This code will sort a dataset of search images into categories predicted by Inception Res-Net then create a feature vector for each image in the search database.
 The feature vector is created using the conv layers of Inception Res-Net where the output tensor is then global average pooled and normalized resulting in a feature vector of size 1536.
 
-When a query image is entered, it's converted into a feature vector and compared to all the feature vectors of images in its category using cosine similarity and outputing a sorted array of the most matching images.
+When a query image is entered, it's converted into a feature vector and compared to all the feature vectors of images in its category using cosine similarity and outputting a sorted array of the most matching images.
 
 Currently, it will give an error and exit if no matching image was found and you have to re-create the database after adding any new images. However, it should be possible to just append the features of the new images to existing ones and possibly add every query image to the database as well.
 
@@ -44,7 +44,7 @@ The feature vector is also much smaller than the classical approach (while provi
 
 Content-based Image Retrieval using deep neural networks is overall much more accurate and faster both in creating the database and search times but it consumes a huge amount of GPU power and memory.
 
-### **Possible Future Improvments:**
+### **Possible Future Improvements:**
 * Reducing the NN model size
-* Reducing the size of the output features vector maybe using some sort of a dimensional reduction redution algorithm
+* Reducing the size of the output features vector maybe using some sort of a dimensional reduction algorithm
 * Providing a faster search using a better vector search algorithm like the one Microsoft released
