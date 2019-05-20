@@ -29,9 +29,11 @@ for category in query_img_categories:
     if not os.path.isfile(category_path):
         continue
 
+    # load the saved features of that category
     loaded_feature_vectors = np.load(category_path, allow_pickle=True)
     loaded_feature_vectors = list(loaded_feature_vectors['arr_0'])
 
+    # only add every image once (using the image name as a reference since that shouldn't be duplicated)
     for loaded_feature_vector in loaded_feature_vectors:
         if IU.Path2Name(loaded_feature_vector[0]) in (IU.Path2Name(feature_vector[0]) for feature_vector in feature_vectors):
             continue
